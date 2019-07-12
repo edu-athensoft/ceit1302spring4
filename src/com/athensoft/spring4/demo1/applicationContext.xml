@@ -8,6 +8,10 @@
   
 <bean id="studentbean" class="com.athensoft.spring4.demo1.Student">  
 	<property name="name" value="Vimal Jaiswal"></property>  
-</bean>  
+</bean> 
+
+<bean id="empbean" class="com.athensoft.spring4.demo1.Employee">  
+	<property name="name" value="Athens"></property>  
+</bean> 
   
 </beans>
