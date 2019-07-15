@@ -8,7 +8,8 @@ import org.springframework.core.io.Resource;
 public class ClientApp {
 	public static void main(String[] args) {
 		
-		Resource resource = new ClassPathResource("com.athensoft.spring4.shino1.applicationContext.xml");
+		Resource resource = new ClassPathResource("com/athensoft/spring4/shino1/applicationContext.xml");
+		
 		BeanFactory factory = new XmlBeanFactory(resource);
 		
 		Student student = (Student) factory.getBean("studentbean");
