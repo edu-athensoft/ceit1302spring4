@@ -11,5 +11,10 @@ public class GlobalController {
 		return "index";
 	}
 	
+	@RequestMapping("/index")
+	public String gotoHome2() {
+		return "index";
+	}
+	
 
 }
