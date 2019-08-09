@@ -17,5 +17,15 @@ public class GlobalController {
 		return "index";
 	}
 	
+	@RequestMapping("/about")
+	public String gotoAbout() {
+		return "about";
+	}
+	
+	@RequestMapping("/contact")
+	public String gotoContact() {
+		return "contact";
+	}
+	
 
 }

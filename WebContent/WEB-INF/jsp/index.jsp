@@ -6,14 +6,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>membership index</title>
+<title>site| index</title>
 </head>
 <body>
 	<div id="header">
 		<h2>Home Page</h2>
 		<hr/>
 	</div>
-	<div id="main"></div>
+	<div id="main">welcome to our page</div>
 	<div id="footer"></div>
 </body>
 </html>
