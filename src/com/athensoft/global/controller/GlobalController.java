@@ -15,4 +15,14 @@ public class GlobalController {
 	public String gotoHome2() {
 		return "index";
 	}
+	
+	@RequestMapping("/about")
+	public String gotoAbout() {
+		return "about";
+	}
+	
+	@RequestMapping("/contact")
+	public String gotoContact() {
+		return "contact";
+	}
 }
