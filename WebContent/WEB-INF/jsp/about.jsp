@@ -7,10 +7,12 @@
 <head>
 <meta charset="utf-8">
 <title>Site| about us</title>
+
 </head>
 <body>
 	<div id="header">
 		<h2>About us</h2>
+		<jsp:include page="inc/menu-inc.jsp"></jsp:include>
 		<hr/>
 	</div>
 	<div id="main">This is a brief introduction to our company</div>
