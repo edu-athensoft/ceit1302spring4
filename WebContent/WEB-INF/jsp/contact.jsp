@@ -10,6 +10,7 @@
 <body>
 	<div id="header">
 		<h2>Contact us</h2>
+		<jsp:include page="inc/menu-inc.jsp"></jsp:include>
 		<hr />
 	</div>
 	<div id="main">This is Contact info.</div>
