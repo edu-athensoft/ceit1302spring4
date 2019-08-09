@@ -1,8 +1,5 @@
 /**
- * 
- */
-/**
- * @author ildmost
+ * @author shino
  *
  */
 package com.athensoft.membership.controller;
