@@ -6,15 +6,19 @@
   <description></description>
   <display-name>ceit1302spring4</display-name>
   <servlet-name>ceit1302spring4</servlet-name>
-  <servlet-class>com.</servlet-class>
+  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
   </servlet>
   
+  <servlet-mapping>
+  <servlet-name>ceit1302spring4</servlet-name>
+  <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>/</welcome-file> 
   </welcome-file-list>
+  
 </web-app>

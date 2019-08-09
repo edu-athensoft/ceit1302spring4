@@ -2,6 +2,7 @@ package com.athensoft.global.controller;
 
 import org.springframework.stereotype.Controller;
 //Ctrl+Shift+O
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class GlobalController {

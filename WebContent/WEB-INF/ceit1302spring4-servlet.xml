@@ -13,11 +13,9 @@
 
 <!-- Component auto-scan support -->
 
-<context:component-scan base-package="com.shino.global.controller"></context:component-scan>
-<context:component-scan base-package="com.shino.uaas.controller"></context:component-scan>
-<context:component-scan base-package="com.shino.member.controller"></context:component-scan>
-<context:component-scan base-package="com.shino.context.*.controller"></context:component-scan>
-<context:component-scan base-package="com.shino.tag.controller"></context:component-scan>
+<context:component-scan base-package="com.athensoft.global.controller"></context:component-scan>
+<context:component-scan base-package="com.athensoft.member.controller"></context:component-scan>
+
 
 <!-- View Resolver -->
 <bean id="jspViewResolver"
