@@ -9,10 +9,14 @@
 <body>
 <div id="header">
 		<h2>Welcome</h2>
-		<jsp:include page="inc/menu-inc.jsp"></jsp:include>
+		<jsp:include page="../inc/menu-inc.jsp"></jsp:include>
 		<hr/>
 	</div>
 	<div id="main">here is your profile.<br/><br/></div>
+	
+	userName:${userName};<br/>
+	userPassword:${userPassword};<br/>
+	
 	<div id="footer"></div>
 	
 <br/><br/>
