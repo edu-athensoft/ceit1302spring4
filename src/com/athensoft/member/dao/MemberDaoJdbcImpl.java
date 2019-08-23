@@ -45,4 +45,11 @@ public class MemberDaoJdbcImpl implements MemberDao {
 
 	}
 
+	@Override
+	public List<Member> findByName() {
+		// TODO Auto-generated method stub
+		System.out.println("findByName(Member member)");
+		return null;
+	}                     
+
 }

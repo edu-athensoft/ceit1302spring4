@@ -20,6 +20,8 @@
 		method="post" name="loginForm">
 		user name: <input type="text" name="name" /> <br/><br/>
 		password: <input type="password" name="password" /> <br/>
+		role:<input type="checkbox" name="role" value="member"/>
+		<input type="checkbox" name="role" value="admin"/>
 		<br/>
 		<br/>
 		<input type="submit" value="submit" /> 

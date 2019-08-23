@@ -1,14 +1,13 @@
-package com.athensoft.member.service;
+package com.athensoft.admin.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
 
 import com.athensoft.member.dao.MemberDao;
 import com.athensoft.member.entity.Member;
+import com.athensoft.member.service.MemberService;
 
-@Service
-public class MemberService {
+public class AdminService extends MemberService {
 	
 	@Autowired
 	@Qualifier("memberDaoJdbcImpl")
@@ -36,9 +35,11 @@ public class MemberService {
 	
     public void update(Member member) {
     	System.out.println("Memberservice.update()");
-		memberDao.update(member);
-    	
+		memberDao.update(member);  	
     }
-	
-
+    
+    public void create(Member member) {
+    	System.out.println("Memberservice.create()");
+    	memberDao.create(member);
+    }
 }
