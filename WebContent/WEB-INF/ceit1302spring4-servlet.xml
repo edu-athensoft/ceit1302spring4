@@ -15,6 +15,7 @@
 	<context:component-scan base-package="com.athensoft.member.controller"></context:component-scan>
 	<context:component-scan base-package="com.athensoft.member.service"></context:component-scan>
 	<context:component-scan base-package="com.athensoft.member.dao"></context:component-scan>
+	<context:component-scan base-package="com.athensoft.demo.controller"></context:component-scan>
 	
 	
 	<!-- View Resolver -->
