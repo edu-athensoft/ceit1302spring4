@@ -3,43 +3,42 @@ package com.athensoft.admin.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-import com.athensoft.member.dao.MemberDao;
-import com.athensoft.member.entity.Member;
-import com.athensoft.member.service.MemberService;
+import com.athensoft.admin.dao.AdminDao;
+import com.athensoft.admin.entity.Admin;
 
-public class AdminService extends MemberService {
+public class AdminService {
 	
 	@Autowired
-	@Qualifier("memberDaoJdbcImpl")
-	private MemberDao memberDao;
+	@Qualifier("adminDaoJdbcImpl")
+	private AdminDao adminDao;
 	
 	public void testMemberService() {
-		System.out.println("MemberService.testMemberService()");
+		System.out.println("AdminService.testAdminService()");
 		
 	}
 	
 	public void getAllMembers() {
-		System.out.println("MemberService.getAllMembers()");
-		memberDao.findAll();
+		System.out.println("AdminService.getAllMembers()");
+		adminDao.findAll();
 	}
 	
 	public void getMemberById() {
-		System.out.println("Memberservice.getMemberById()");
-		memberDao.findById();
+		System.out.println("AdminService.getMemberById()");
+		adminDao.findById();
 	}
 	
 	public void getMemberByName() {
-		System.out.println("Memberservice.getMemberByName()");
-		memberDao.findByName();	
+		System.out.println("AdminService.getMemberByName()");
+		adminDao.findByName();	
 	}
 	
-    public void update(Member member) {
-    	System.out.println("Memberservice.update()");
-		memberDao.update(member);  	
+    public void update(Admin admin) {
+    	System.out.println("AdminService.update()");
+    	adminDao.update(admin);  	
     }
     
-    public void create(Member member) {
-    	System.out.println("Memberservice.create()");
-    	memberDao.create(member);
+    public void create(Admin admin) {
+    	System.out.println("AdminService.create()");
+    	adminDao.create(admin);
     }
 }

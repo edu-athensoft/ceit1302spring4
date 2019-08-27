@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.athensoft.admin.entity.Admin;
 import com.athensoft.admin.service.AdminService;
 import com.athensoft.member.entity.Member;
 
@@ -27,9 +28,9 @@ public class AdminController {
 		adminService.getAllMembers();
 		adminService.getMemberById();
 		adminService.getMemberByName();
-		Member member = null;
-		adminService.update(member);
-		adminService.create(member);
+		Admin admin = null;
+		adminService.update(admin);
+		adminService.create(admin);
 		
 		return "admin/adminWelcome";
 		

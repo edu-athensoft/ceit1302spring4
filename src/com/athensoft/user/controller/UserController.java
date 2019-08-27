@@ -1,4 +1,4 @@
-package com.athensoft.member.controller;
+package com.athensoft.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,7 @@ import com.athensoft.member.service.MemberService;
 
 @Controller
 @RequestMapping("/member")
-public class MemberController {
+public class UserController {
 	
 	@RequestMapping("/login")	
 	public String gotoLogin() {

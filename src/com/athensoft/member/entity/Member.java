@@ -1,6 +1,6 @@
 package com.athensoft.member.entity;
 
-import com.athensoft.entity.User;
+import com.athensoft.user.entity.User;
 
 public class Member extends User{
 		

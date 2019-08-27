@@ -1,4 +1,4 @@
-package com.athensoft.entity;
+package com.athensoft.user.entity;
 
 public class User {
 	
@@ -8,8 +8,6 @@ public class User {
 	private Integer gender;//考虑到多语言i18N，String不好，用整型映射比较好
 	private Integer age;
 	private Integer status;
-	private Integer role;
-
 	
 	public String getUserName() {
 		return userName;
@@ -47,16 +45,8 @@ public class User {
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
-	public Integer getRole() {
-		return role;
-	}
-	public void setRole(Integer role) {
-		this.role = role;
-	}
-	
-	
+
 	
 
+	
 }
-
-
