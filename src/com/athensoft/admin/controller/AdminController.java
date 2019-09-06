@@ -8,7 +8,7 @@ import com.athensoft.admin.entity.Admin;
 import com.athensoft.admin.service.AdminService;
 import com.athensoft.member.entity.Member;
 
-@Controller
+
 @RequestMapping("/admin")
 public class AdminController {
 	

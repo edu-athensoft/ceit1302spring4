@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.athensoft.member.service.MemberService;
 
-@Controller
-@RequestMapping("/member")
+
+@RequestMapping("/user")
 public class UserController {
 	
 	@RequestMapping("/login")	
