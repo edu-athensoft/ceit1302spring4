@@ -1,11 +1,15 @@
 package com.athensoft.user.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.athensoft.member.service.MemberService;
+import com.athensoft.user.entity.User;
+import com.athensoft.user.service.UserService;
 
-
+@Controller
 @RequestMapping("/user")
 public class UserController {
 	
@@ -33,13 +37,14 @@ public class UserController {
 	
 	@Autowired
 	//自动化装配 实现自动注入
-	private MemberService memberService;
+	private UserService userService;
+	//private MemberService memberService;
 	
 	@RequestMapping("/welcome")		
 	public String gotoWelcome(//跳转到页面
 			) {
-		memberService.testMemberService();
-		memberService.getAllMembers();
+//		memberService.testMemberService();
+//		memberService.getAllMembers();
 		return "member/welcome";
 	}
 	
@@ -50,5 +55,13 @@ public class UserController {
 		return "index";
 	}
 	
+	@RequestMapping("/users")	
+	public String testFindAllUser() {
+		List<User> userList = userService.getAllUsers();
+		for(User user: userList) {
+			System.out.println(user.toString());
+		}
+		return "index";
+	}
 
 }

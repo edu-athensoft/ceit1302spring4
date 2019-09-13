@@ -7,8 +7,8 @@ import com.athensoft.member.service.MemberService;
 import com.athensoft.user.service.UserService;
 
 @Controller
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/member")
+public class MemberController {
 	
 	@RequestMapping("/login")	
 	public String gotoLogin() {
@@ -34,13 +34,13 @@ public class UserController {
 	
 	@Autowired
 	//自动化装配 实现自动注入
-	private UserService userService;
+	private MemberService memberService;
 	
 	@RequestMapping("/welcome")		
 	public String gotoWelcome(//跳转到页面
 			) {
-		userService.testUserService();
-		userService.getAllUsers();
+		memberService.testMemberService();
+
 		return "user/welcome";
 	}
 	

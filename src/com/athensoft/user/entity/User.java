@@ -45,6 +45,13 @@ public class User {
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
+	@Override
+	public String toString() {
+		return "User [userName=" + userName + ", password=" + password + ", memberId=" + memberId + ", gender=" + gender
+				+ ", age=" + age + ", status=" + status + "]";
+	}
+	
+	
 
 	
 
