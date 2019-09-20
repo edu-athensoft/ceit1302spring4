@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.athensoft.member.service.MemberService;
-import com.athensoft.user.service.UserService;
 
 @Controller
 @RequestMapping("/member")

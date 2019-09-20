@@ -42,6 +42,17 @@ public class UserService {
 		userDao.update(user);
     	
     }
-	
+    
+    
+    public void create(User user) {
+    	//System.out.println("Userservice.create()");
+		userDao.create(user);
+    	
+    }
 
+    public void delete(User user) {
+    	//System.out.println("Userservice.delete()");
+		userDao.delete(user);
+    	
+    }
 }

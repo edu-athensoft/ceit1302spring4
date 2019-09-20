@@ -11,9 +11,9 @@ public interface MemberDao {
 	
 	public List<Member> findAll();
 	
-	public Member findById();
+	public Member findById(long memberId);
 	
-	public List<Member> findByName();
+	public List<Member> findByName(String userName);
 	
 	public void update(Member member);
 	

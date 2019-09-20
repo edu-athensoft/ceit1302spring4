@@ -22,14 +22,14 @@ public class AdminService {
 		adminDao.findAll();
 	}
 	
-	public void getMemberById() {
+	public void getMemberById(long memberId) {
 		System.out.println("AdminService.getMemberById()");
-		adminDao.findById();
+		adminDao.findById(memberId);
 	}
 	
-	public void getMemberByName() {
+	public void getMemberByName(String userName) {
 		System.out.println("AdminService.getMemberByName()");
-		adminDao.findByName();	
+		adminDao.findByName(userName);	
 	}
 	
     public void update(Admin admin) {
@@ -41,4 +41,14 @@ public class AdminService {
     	System.out.println("AdminService.create()");
     	adminDao.create(admin);
     }
+    
+    public void delete(Admin admin) {
+    	System.out.println("Adminservice.delete()");
+		adminDao.delete(admin);
+    	
+    }
+    public void activateAccount(Admin admin) {
+    	System.out.println("AdminService.activateAccount()");
+    	adminDao.activateAccount(admin);
+    };
 }

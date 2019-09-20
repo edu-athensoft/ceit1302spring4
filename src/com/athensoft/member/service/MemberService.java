@@ -24,14 +24,14 @@ public class MemberService {
 		memberDao.findAll();
 	}
 	
-	public void getMemberById() {
+	public void getMemberById(long memberId) {
 		System.out.println("Memberservice.getMemberById()");
-		memberDao.findById();
+		memberDao.findById(memberId);
 	}
 	
-	public void getMemberByName() {
+	public void getMemberByName(String userName) {
 		System.out.println("Memberservice.getMemberByName()");
-		memberDao.findByName();	
+		memberDao.findByName(userName);	
 	}
 	
     public void update(Member member) {
@@ -40,5 +40,16 @@ public class MemberService {
     	
     }
 	
+    public void create(Member member) {
+    	System.out.println("Memberservice.create()");
+		memberDao.create(member);
+    	
+    }
+    
+    public void delete(Member member) {
+    	System.out.println("Memberservice.delete()");
+		memberDao.delete(member);
+    	
+    }
 
 }

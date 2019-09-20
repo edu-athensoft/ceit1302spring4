@@ -13,15 +13,17 @@ public interface AdminDao {
 	
 	public List<Admin> findAll();
 	
-	public Admin findById();
+	public Admin findById(long memberId);
 	
-	public List<Admin> findByName();
+	public List<Admin> findByName(String userName);
 	
 	public void update(Admin admin);
 	
 	public void create(Admin admin);
 	
 	public void delete(Admin admin);
+	
+	public void activateAccount(Admin admin) ;
 	
 	
 	

@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.athensoft.member.service.MemberService;
 import com.athensoft.user.entity.User;
 import com.athensoft.user.service.UserService;
 
@@ -38,7 +37,6 @@ public class UserController {
 	@Autowired
 	//自动化装配 实现自动注入
 	private UserService userService;
-	//private MemberService memberService;
 	
 	@RequestMapping("/welcome")		
 	public String gotoWelcome(//跳转到页面

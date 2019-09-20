@@ -25,6 +25,7 @@ public class UserDaoJdbcImpl extends BaseDaoJdbcImpl implements UserDao {
 
 	@Override
 	public List<User> findAll() {
+		
 		String sql = "select * from " + TABLE; 
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		List<User> x = new ArrayList<User>();
@@ -38,6 +39,7 @@ public class UserDaoJdbcImpl extends BaseDaoJdbcImpl implements UserDao {
 
 	@Override
 	public User findById(long memberId) {
+		
 		String sql = "select * from "+ TABLE +" where memeber_id = :memberId";
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		paramSource.addValue("memberId", memberId);
@@ -53,6 +55,7 @@ public class UserDaoJdbcImpl extends BaseDaoJdbcImpl implements UserDao {
 
 	@Override
 	public List<User> findByName(String userName) {
+		
 		String sql = "select * from "+ TABLE +" where user_name = :userName";
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		List<User> x = new ArrayList<User>();
@@ -68,19 +71,75 @@ public class UserDaoJdbcImpl extends BaseDaoJdbcImpl implements UserDao {
 
 	@Override
 	public void update(User user) {
-		// TODO Auto-generated method stub
+		
+		StringBuffer sbf = new StringBuffer();
+		
+		sbf.append("UPDATE " + TABLE);
+		sbf.append(" SET ");
+		sbf.append("password=:password,  ");
+		sbf.append("gender=:gender,  ");
+		sbf.append("age=:age,  ");
+		sbf.append(" WHERE member_id=:memberId ");
+
+		String sql = sbf.toString();
+
+		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+		
+		paramSource.addValue("password", user.getPassword());
+		paramSource.addValue("gender", user.getGender());
+		paramSource.addValue("age", user.getAge());
+		paramSource.addValue("memberId", user.getMemberId());
+
+		jdbc.update(sql, paramSource);
 		
 	}
 
 	@Override
 	public void create(User user) {
-		// TODO Auto-generated method stub
 		
+		StringBuffer sbf = new StringBuffer();
+		
+		sbf.append("INSERT INTO ").append(TABLE).append("(");
+		sbf.append("member_id,");
+		sbf.append("user_name,");
+		sbf.append("password,");
+		sbf.append("gender,");
+		sbf.append("age,");
+		sbf.append("status");
+		sbf.append(") ");
+		sbf.append("VALUES(");
+		sbf.append(":memberId,");
+		sbf.append(":userName,");
+		sbf.append(":password,");
+		sbf.append(":gender,");
+		sbf.append(":age,");;
+		sbf.append(":status");
+		sbf.append(")");
+
+		String sql = sbf.toString();
+		
+
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+
+        paramSource.addValue("memberId", user.getMemberId());
+        paramSource.addValue("userName", user.getUserName());
+		paramSource.addValue("userPassword", user.getPassword());
+		paramSource.addValue("gender",user.getGender());
+		paramSource.addValue("age",user.getAge());
+		paramSource.addValue("status",user.getStatus());
+		
+		jdbc.update(sql, paramSource);
 	}
+		
 
 	@Override
 	public void delete(User user) {
-		// TODO Auto-generated method stub
+		
+		String sql = "delete from " + TABLE + " where member_id =:memberId";
+
+		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+		paramSource.addValue("memberId", user.getMemberId());
+		jdbc.update(sql, paramSource);
 		
 	}
 	
@@ -92,7 +151,7 @@ public class UserDaoJdbcImpl extends BaseDaoJdbcImpl implements UserDao {
 			x.setPassword(rs.getString("password"));
 			x.setGender(rs.getInt("gender"));
 			x.setAge(rs.getInt("age"));
-			x.setAge(rs.getInt("status"));
+			x.setStatus(rs.getInt("status"));
 			
 		    return x;
 		}
