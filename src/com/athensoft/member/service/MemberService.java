@@ -1,5 +1,7 @@
 package com.athensoft.member.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -19,19 +21,20 @@ public class MemberService {
 		
 	}
 	
-	public void getAllMembers() {
+	public List<Member> getAllMembers() {
 		System.out.println("MemberService.getAllMembers()");
-		memberDao.findAll();
+		
+		return memberDao.findAll();
 	}
 	
-	public void getMemberById(long memberId) {
+	public Member getMemberById(long memberId) {
 		System.out.println("Memberservice.getMemberById()");
-		memberDao.findById(memberId);
+		return memberDao.findById(memberId);
 	}
 	
-	public void getMemberByName(String userName) {
-		System.out.println("Memberservice.getMemberByName()");
-		memberDao.findByName(userName);	
+	public List<Member> getMemberByName(String userName) {
+		System.out.println("Memberservice.getMemberByName()");	
+		return memberDao.findByName(userName);	
 	}
 	
     public void update(Member member) {
