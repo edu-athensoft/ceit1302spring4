@@ -23,7 +23,6 @@
 <context:component-scan base-package="com.athensoft.user.dao"></context:component-scan>
 <context:component-scan base-package="com.athensoft.user.controller"></context:component-scan>
 <context:component-scan base-package="com.athensoft.user.service"></context:component-scan>
-<context:component-scan base-package="com.athensoft.demo.controller"></context:component-scan>
 <context:component-scan base-package="com.athensoft.base.dao"></context:component-scan>
 
 
