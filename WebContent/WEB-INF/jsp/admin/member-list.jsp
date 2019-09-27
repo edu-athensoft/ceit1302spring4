@@ -17,7 +17,7 @@
 	<div id="main">here is the member list<br/><br/></div>
 	
 	<c:forEach items="${memberList}" var="member">
-		{member.memberId},{member.userName},{member.password}<br/>
+		${member.memberId},${member.userName},${member.password}<br/>
 	</c:forEach>
 	
 	
