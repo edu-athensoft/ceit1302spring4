@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>member list</title>
+<title>Admin|member list</title>
 </head>
 <body>
 
