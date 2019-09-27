@@ -29,12 +29,12 @@ public class UserService {
 	
 	public User getUserById(long memberId) {
 		//System.out.println("Userservice.getUserById()");
-		return (User)userDao.findById(memberId);
+		return userDao.findById(memberId);
 	}
 	
 	public User getUserByName(String userName) {
 		//System.out.println("Userservice.getUserByName()");
-		return (User) userDao.findByName(userName);	
+		return  (User) userDao.findByName(userName);	
 	}
 	
     public void update(User user) {
