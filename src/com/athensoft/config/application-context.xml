@@ -13,7 +13,7 @@
 
 <!-- Multi-language and i18n support -->
 <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-<property name="basenames">
+<property name="basenames"> 
 <list>
 <value>com/athensoft/site/resources/website</value>
 <value>com/athensoft/site/resources/errorcodes</value>
